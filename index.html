@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peanut's World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fade-in">
+        <h1>Bienvenido a Peanut's Wolrd</h1>
+    </header>
+    <main>
+        <section id="personajes" class="slide-up">
+            <h2>Personajes principales de Peanuts</h2>
+            <div class="character-grid">
+                <div class="character-card hover-grow">
+                    <img src="Charlie_Brown.png" alt="Charlie Brown">
+                    <h3>Charlie Brown</h3>
+                    <p>El adorable y a menudo melancólico protagonista. Nunca se rinde, a pesar de su mala suerte con las cometas y el fútbol.</p>
+                </div>
+                <div class="character-card hover-grow">
+                    <img src="Snoopy_Peanuts.png" alt="Snoopy">
+                    <h3>Snoopy</h3>
+                    <p>El beagle más imaginativo del mundo. Es un as de la aviación de la Primera Guerra Mundial, un famoso escritor y mucho más.</p>
+                </div>
+                <div class="character-card hover-grow">
+                    <img src="Lucy_van_Pelt.png" alt="Lucy van Pelt">
+                    <h3>Lucy van Pelt</h3>
+                    <p>La hermana mayor de Linus, conocida por su fuerte carácter y por su puesto de ayuda psiquiátrica de 5 centavos.</p>
+                </div>
+                <div class="character-card hover-grow">
+                    <img src="Linus_van_Pelt.png" alt="Linus van Pelt">
+                    <h3>Linus van Pelt</h3>
+                    <p>El inteligente y filosófico hermano menor de Lucy, que casi nunca se separa de su mantita de seguridad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="slide-up">
+            <h2>Galería Visual</h2>
+            <div id="frase-celebre" class="quote-box">
+                <h3>Frase del Día</h3>
+                <blockquote id="quote-container">
+                    <p id="quote-text"></p>
+                    <cite id="quote-author"></cite>
+                </blockquote>
+            </div>
+            <div class="comic-gallery">
+                <div class="slider-container">
+                    
+                    <div class="slide fade">
+                        <img src="tira1desnoopy.png" alt="Tira cómica 1">
+                    </div>
+                    
+                    <div class="slide fade">
+                        <img src="tira2snoopy.png" alt="Tira cómica 2">
+                    </div>
+                    
+                    <div class="slide fade">
+                        <img src="tira3snoopy.png" alt="Tira cómica 3">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            </section>
+
+        <section id="trivia" class="slide-up">
+            <h2>Trivia de Peanuts</h2>
+            <div id="trivia-container">
+                </div>
+            <button id="submit-trivia" class="button-hover-effect">Ver Resultados</button>
+            <div id="trivia-results"></div>
+        </section>
+
+        <section id="curiosidades" class="slide-up">
+            <h2>Curiosidades</h2>
+            <ul>
+                <li>Charles M. Schulz dibujó un total de 17,897 tiras cómicas de Peanuts durante casi 50 años.</li>
+                <li>Snoopy tiene siete hermanos: Spike, Belle, Marbles, Olaf, Andy, Molly y Rover.</li>
+                <li>El personaje de Charlie Brown lleva el nombre de un compañero de trabajo de Schulz en la Art Instruction, Inc.</li>
+                <li>La famosa camiseta de Charlie Brown con el zigzag negro no apareció hasta dos meses después del debut de la tira.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="fade-in">
+        <p>Creado con ❤️ por Fatima Rayo para los fans de Peanuts</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

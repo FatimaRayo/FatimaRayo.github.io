@@ -1,0 +1,428 @@
+body {
+    font-family: 'Comic Neue', cursive; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4; 
+    color: #333;
+    overflow-x: hidden; 
+}
+
+h1, h2 {
+    font-family: 'Kalam', cursive; 
+    color: #2c3e50;
+}
+
+header {
+    background: #FFD700; 
+    color: #8B4513; 
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+    padding: 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    background: #fff;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out; 
+}
+
+section:hover {
+    transform: translateY(-5px); 
+}
+
+h2 {
+    color: #4682B4; 
+    border-bottom: 3px solid #FFD700; 
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+.character-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.character-card img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #4682B4;
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover img {
+    transform: scale(1.05) rotate(3deg);
+}
+
+.character-card h3 {
+    color: #8B4513;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.character-card p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px; 
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 40px; 
+    height: 40px;
+    padding: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    user-select: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    opacity: 0;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-container:hover .prev,
+.slider-container:hover .next {
+    opacity: 1;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.0s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#frase-celebre {
+    text-align: center;
+    padding: 30px;
+    background: #eaf2f8;
+    border-left: 8px solid #FFD700;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+#quote-container {
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+#quote-container p {
+    font-size: 1.6em;
+    font-style: italic;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#quote-container cite {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #4682B4;
+    font-size: 1.2em;
+}
+
+.comic-gallery {
+    text-align: center;
+}
+
+.comic-gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #ddd;
+    padding: 8px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.comic-gallery img:hover {
+    transform: scale(1.03);
+}
+
+.caption {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.question {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+.answers label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 8px 0;
+    transition: background-color 0.2s ease;
+}
+
+.answers label:hover {
+    background-color: #f0f8ff;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+#submit-trivia {
+    display: none;
+}
+
+.answers label.correct {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.answers label.incorrect {
+    color: #dc3545;
+    text-decoration: line-through;
+}
+
+.answers label.correct::after {
+    content: ' ✔️ ¡Correcto!';
+}
+
+.answers label.incorrect::after {
+    content: ' ❌ Incorrecto';
+}
+
+.answers label:has(input:disabled) {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.answers label:has(input:disabled):hover {
+    background-color: transparent;
+}
+
+
+#trivia-results {
+    margin-top: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3em;
+    color: #4682B4;
+}
+
+#curiosidades ul {
+    list-style: none;
+    padding: 0;
+}
+
+#curiosidades li {
+    background: #fdfdff;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-left: 4px solid #4682B4;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+#curiosidades li:hover {
+    background-color: #f0f8ff;
+    transform: translateX(5px);
+}
+
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #333;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+
+
+.fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s ease-out forwards;
+}
+
+#personajes.slide-up { animation-delay: 0.3s; }
+#galeria.slide-up { animation-delay: 0.6s; }
+#trivia.slide-up { animation-delay: 0.9s; }
+#curiosidades.slide-up { animation-delay: 1.2s; }
+
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2em; 
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    main {
+        padding: 0.5rem; 
+    }
+
+    section {
+        padding: 15px; 
+    }
+
+    .character-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    .character-card h3 {
+        font-size: 1.3em;
+    }
+
+    #frase-celebre {
+        padding: 20px;
+    }
+
+    #quote-container p {
+        font-size: 1.2em; 
+    }
+
+    #quote-container cite {
+        font-size: 1em;
+    }
+
+    .prev, .next {
+        opacity: 0.7; 
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 20px;
+    }
+
+    .question {
+        font-size: 1em;
+    }
+
+    .answers label {
+        font-size: 0.9em;
+        padding: 10px 0;
+    }
+
+    #trivia-results {
+        font-size: 1.1em;
+    }
+
+}
